@@ -49,7 +49,7 @@
 
     taskDetailMask.on('click', hideTaskDetail);
 
-    // 禁用默认行为
+    // 禁用默认行为，解决移动端bug
     document.addEventListener('submit',function (event) {
         event.preventDefault();
     });
