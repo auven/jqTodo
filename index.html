@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>任务清单</title>
+    <link rel="stylesheet" href="lib/normalize.css">
+    <link rel="stylesheet" href="lib/datetimepicker/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<!--任务提醒-->
+<div class="msg">
+    <span class="msg-content"></span>
+    <button class="msg-btn" type="button">知道了</button>
+</div>
+<!--主体-->
+<div class="container">
+    <!--标题-->
+    <h1>我的Todo</h1>
+    <!--添加任务-->
+    <form class="add-task">
+        <input type="text"
+               name="content"
+               placeholder="e.g. 下午看一小时书"
+               autofocus
+               autocomplete="false"
+        >
+        <button type="submit">创建任务</button>
+    </form>
+    <!--任务清单-->
+    <div class="task-list">
+
+    </div>
+    <!--已完成的任务清单-->
+    <div class="task-list-complete">
+
+    </div>
+    <!--任务详情-->
+    <div class="task-detail-mask"></div>
+    <div class="task-detail">
+
+    </div>
+</div>
+
+<script src="lib/jquery-3.2.1.min.js"></script>
+<script src="lib/store.legacy.min.js"></script>
+<script src="lib/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+<script src="js/base.js"></script>
+</body>
+</html>
