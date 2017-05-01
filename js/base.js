@@ -37,7 +37,7 @@
         var newTask = {};
 
         // 禁用默认行为
-        e.preventDefault();
+        // e.preventDefault();
         // 获取新task值
         newTask.content = $(this).find('input[name=content]').val();
         // 如果为空，退出，否则继续执行
@@ -48,6 +48,11 @@
     });
 
     taskDetailMask.on('click', hideTaskDetail);
+
+    // 禁用默认行为
+    document.addEventListener('submit',function (event) {
+        event.preventDefault();
+    });
 
     // 添加任务
     function addTask(newTask) {
@@ -218,7 +223,7 @@
         });
 
         updateForm.on('submit', function (e) {
-            e.preventDefault();
+            // e.preventDefault();
             var data = {};
             data.content = $(this).find('[name=content]').val();
             data.desc = $(this).find('[name=desc]').val();
